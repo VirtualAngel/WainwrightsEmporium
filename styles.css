@@ -1,0 +1,281 @@
+/* Common styles */
+:root {
+    --background: hsl(26, 44%, 6%);
+    --text-color: hsl(54, 24%, 92%);
+    --accent1: hsl(218, 34%, 75%);
+    --accent2: hsl(354, 48%, 89%);
+    --focus-bkg: #9DD1BD;
+
+    /* Button Text Colors */
+
+    --grey-button-text: hsl(217, 33%, 92%);
+    --beige-button-text: hsl(56, 24%, 88%);
+    --blush-button-text: hsl(351, 48%, 95%);
+    --brown-button-text: hsl(30, 3%, 76%);
+
+    --font-family-default: Montserrat, sans-serif;
+    --font-family-header: "Smythe", system-ui;
+    
+    /* gradients */
+    --gradient-beige: linear-gradient(to right, hsl(56, 8%, 40%), hsl(55, 23%, 79%), hsl(54, 24%, 92%));
+    --gradient-blush: linear-gradient(to right, hsl(356, 6%, 49%), hsl(353, 25%, 81%), hsl(354, 49%, 92%));
+    --gradient-brown: linear-gradient(to right, hsl(23, 45%, 6%), hsl(20, 6%, 31%), hsl(20, 3%, 58%));
+    --gradient-grey: linear-gradient(to right, hsl(218, 11%, 34%), hsl(217, 17%, 60%), hsl(217, 33%, 92%));
+}
+
+*,
+* ::after,
+* ::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: var(--font-family-default);
+    line-height: 1.75;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-header);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--accent1);
+    margin-bottom: .5rem;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--accent2);
+}
+
+/*Spacing between paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Navigation */
+
+header {
+    background-color: var(--background);
+    margin-block: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--accent2);
+}
+
+.logo img {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+
+.nav-links li a:hover {
+    background-color: var(--accent1);
+}
+
+.button-nav {
+    background-color: var(--text-color);
+    color: var(--background);
+    border: none;
+}
+
+.button-nav:hover {
+    background-color: var(--accent2);
+    color: var(--background);
+}
+
+.button-nav:active {
+    background-color: var(--accent2);
+    color: var(--background);
+}
+
+.button-nav:focus {
+    background-color: var(--accent2); /* Change the background color when the button is focused */
+    color: var(--background); /* Change the text color when the button is focused */
+}
+
+/* Main Content */
+.section-container {
+    padding: 0 2rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.left-pic,
+.right-pic {
+    width: 50%; 
+    margin: 1.5rem 0; 
+}
+
+.left-pic {
+    float: left;
+    margin-right: 1.5rem;
+}
+.right-pic {
+    float: right;
+    margin-left: 1.5rem;
+}
+
+/* Option Buttons */
+.button-container {
+    max-width: 60rem;
+    margin-inline: auto;
+
+}
+
+.btn-option {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    padding: 8px 8px;
+    background-color: var(--background);
+    color: var(--grey-button-text);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    border-width: 2px;
+    border-radius: 54px;
+   border-image: var(--gradient-grey) 1;
+  }
+
+  .btn-option:hover {
+    background-color: var(--background);
+    color: var(--blush-button-text);
+   border-image: var(--gradient-blush) 1;
+  }
+
+  .btn-option:active {    
+    background-color: var(--background);
+    color: var(--beige-button-text);
+   border-image: var(--gradient-beige) 1;
+  }
+
+  .circle-icon {
+    display: inline-block; /* Ensure the span takes up space */
+    margin-left: 1rem;
+    width: 16px;
+    height: 16px;
+}
+
+.circle-icon img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+}
+
+  .circle-icon:hover img {
+    /* Set the background image for hover state */
+    content: url('Assets/icons/blush-circle.svg');
+    /* Make sure to adjust other properties like width, height, etc. as needed */
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Change circle background image when the image is active (e.g., clicked) */
+.circle-icon:active img {
+    /* Set the background image for active state */
+    content: url('Assets/icons/beige-circle.svg');
+    /* Make sure to adjust other properties like width, height, etc. as needed */
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--background); /* Set background color for the footer */
+    padding: 20px 0; /* Add padding to top and bottom */
+    text-align: center; /* Center-align content */
+    font-size: .5rem; /* Set font size in the footer smaller */
+    border-top: 2px solid var(--blush-button-text);
+}
+
+.footer-container {
+    max-width: 1000px; /* Set maximum width for content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.footer-container img {
+    width: 5%; /* Adjust the width of the logo as needed */
+}
+
+.footer-container p {
+    margin-top: 10px; /* Add margin on top of copyright text */
+    font-size: 14px; /* Adjust font size as needed */
+    color:var(--text-color); /* Set color for copyright text */
+}
+
+
+
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for tablet size */
+    .left-pic,
+    .right-pic {
+        width: 50%; /* Make images take 50% width on tablet */
+        margin: 1.5rem auto; /* Center images */
+        float: none; /* Remove float */
+    }
+    .button-container {
+        padding: 1rem;
+        flex-direction: row; /* Change direction to row for small screens */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .btn-option {
+        margin: 0 0.5rem; /* Adjust margin for spacing between buttons */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Styles for smaller screens */
+    .section-container {
+        padding: 0 1rem; /* Reduce padding for smaller screens */
+        display: flex; /* Add display: flex to container */
+        flex-direction: column; /* Stack items vertically by default */
+    }
+    .button-container {
+        padding: 1rem;
+        flex-direction: row; /* Change direction to row for small screens */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .btn-option {
+        margin: 0 0.5rem; /* Adjust margin for spacing between buttons */
+    }
+    .logo img {
+        max-width: 150px;
+}
+
+}
