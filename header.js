@@ -8,7 +8,7 @@ class Header {
         header.innerHTML = `
             <nav>
                 <div class="logo">
-                    <img src="Assets\Logos\whitelogowithtext.svg" alt="logo">
+                    <img src="Assets/Logos/whitelogowithtext.svg" alt="logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#" class="button-nav">Home</a></li>
